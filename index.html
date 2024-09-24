@@ -1,22 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-	  <script>
-        fetch('https://api64.ipify.org?format=json') // 获取用户的 IP 地址
-            .then(response => response.json())
-            .then(data => {
-                const userIp = data.ip; // 获取 IP
-                const specificIp = '223.79.242.104'; // 替换为你要检测的 IP
-		    const specificIp = '42.59.247.35';
-                const redirectUrl = 'https://report.skyman.cloud/403'; // 替换为要跳转的页面
-
-                // 检查用户 IP 并重定向
-                if (userIp === specificIp) {
-                    window.location.href = redirectUrl;
-                }
-            })
-            .catch(err => console.error('获取 IP 地址出错:', err));
-    </script>
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <body>
