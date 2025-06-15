@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <script>
+        // 域名重定向核心逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentDomain = window.location.hostname;
+            
+            if (currentDomain === "shop.flavor.ink") {
+                // 检查当前路径是否已经是/shop，避免无限重定向
+                if (!window.location.pathname.startsWith('/shop')) {
+                    window.location.href = "https://shop.flavor.ink/shop";
+                }
+            }
+            // 对于report.flavor.ink，不执行任何操作
+        });
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="1; url=https://wj.qq.com/s2/15244351/5339/">
     <title>跳转中...</title>
